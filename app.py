@@ -15,4 +15,21 @@ os.environ["LANGCHAIN_TRACING_V2_API_KEY"] = "true"
 
 
 # prompt template
-prompt = ChatPromptTemplate()
+prompt = ChatPromptTemplate.from_messages(
+    [
+        ("system", "You are helpful assistant. Please respond to queries"),
+        ("user", "Question:{question}"),
+    ]
+)
+
+# streamlit framework
+
+st.title("Langchain Demo")
+input_text = st.text_input("search the topic you want to know about")
+
+
+# openAI llm
+llm = ChatOpenAI(model="gpt-3.5-turbo")
+output_parser = StrOutputParser()
+
+chain = prompt | llm | output_parser
