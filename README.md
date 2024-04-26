@@ -50,6 +50,13 @@ To adapt a language model to a task, we need:
    2. One-shot learning: number of training examples is 1
    3. Few-shot learning: number of training examples is few
 
+# Which adaptation procedure should we go with?
+
+1. Training can be challenging due to overfitting (just imagine fine-tuning a 175 billion parameter model based on 5 examples). How to do this effectively will be the topic of the adaptation lecture.
+2. For now, we will be content with adaptation of GPT-3 using prompting. Note that the limitation of prompting is that we can only leverage a only small number of training instances (as many as can fit into a prompt). This is due to a limitation of Transformers, where the prompt and the completion must fit into 2048 tokens.
+
+# Along the way, we will do ablations to see if model size and number of in-context training instances matters. Spoiler: `it does and more is better.`
+
 ## langchain community
 
 all third-party integrations will be available in langchain-community
