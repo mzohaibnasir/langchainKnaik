@@ -8,26 +8,26 @@ import uvicorn
 import os
 
 
-from langchain_community.llms import ollama
+from langchain_community.llms import Ollama
 from dotenv import load_dotenv
 
 load_dotenv()
 
-os.environ["OPENAI_API_KEY"] = os.environ("OPENAI_API_KEY")
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 
-APP = FastAPI(
+fastAPIapp = FastAPI(
     title="Langchain Server", version="1.0", description="A simple API server"
 )
 
 # adding routes
-add_routes(app, ChatOpenAI(), path="/openai")
+add_routes(fastAPIapp, ChatOpenAI(), path="/openai")
 
 # to integrate prompt template with the route
 # model1
 llmOpenAI = ChatOpenAI()
 # model2
-llmLlama = ollama(model="llama2")
+llmLlama = Ollama(model="llama2")
 
 
 # will interact with openAI
@@ -41,11 +41,10 @@ prompt2 = ChatPromptTemplate.from_template(
 )
 
 
-add_routes(app, prompt1|llmOpenAI. path="/essay")
+add_routes(fastAPIapp, prompt1 | llmOpenAI, path="/essay")
 
-add_routes(app, prompt2|llmLlama. path="/poem")
+add_routes(fastAPIapp, prompt2 | llmLlama, path="/poem")
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="localhost",
-                port=8000)
+    uvicorn.run(fastAPIapp, host="localhost", port=8000)
