@@ -20,10 +20,14 @@ We use the term adaptation to refer to the process of taking a language model an
 1. a natural language description of the task, and
 2. a set of `training instances` (input-output pairs).
 
-Adaptation refers to the process of fine-tuning a pre-trained language model to perform a specific task. A language model is a distribution over sequences of tokens, allowing it to score sequences and generate completions. For example:
-Scoring sequences: p(the,mouse,ate,the,cheese)
-Generating completions: the mouse ate ⇝ the cheese
-Tasks
+Adaptation refers to the process of fine-tuning a pre-trained language model to perform a specific task.
+A language model is a distribution over sequences of tokens, allowing it to score sequences and generate completions.
+For example:
+` Scoring sequences: p(the,mouse,ate,the,cheese)`
+`Generating completions: the mouse ate ⇝ the cheese`
+
+# Tasks
+
 A task is a mapping from inputs to outputs. For instance:
 Input: What school did Burne Hogarth establish?
 Output: School of Visual Arts
