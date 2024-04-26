@@ -59,6 +59,10 @@ To adapt a language model to a task, we need:
 
 # we can break down the the joint probability into the product of the conditional probabilities for each token by the chain rule.
 
+# Perplexity: As explained earlier, it's a metric used to evaluate the performance of a language model. It essentially measures how well the model predicts the next word in a sequence. Perplexity doesn't deal with the training process itself, but rather how well the trained model performs.
+
+#####################################################################################################3333
+
 ## langchain community
 
 all third-party integrations will be available in langchain-community
