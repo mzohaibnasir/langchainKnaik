@@ -57,6 +57,8 @@ To adapt a language model to a task, we need:
 
 # Along the way, we will do ablations to see if model size and number of in-context training instances matters. Spoiler: `it does and more is better.`
 
+# we can break down the the joint probability into the product of the conditional probabilities for each token by the chain rule.
+
 ## langchain community
 
 all third-party integrations will be available in langchain-community
