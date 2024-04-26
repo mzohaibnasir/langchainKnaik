@@ -38,13 +38,13 @@ To adapt a language model to a task, we need:
 #There are two primary ways to perform adaptation:
 
 1. Training (standard supervised learning): train a new model that maps inputs to outputs, either by
-   a. creating a new model that uses the language model as features (probing), or
-   b. starting with the language model and updating it based on the training instances (fine-tuning), or
-   c. something in between (lightweight fine-tuning).
+   1. creating a new model that uses the language model as features (probing), or
+   2. starting with the language model and updating it based on the training instances (fine-tuning), or
+   3. something in between (lightweight fine-tuning).
 2. Prompting (in-context learning): Construct a prompt (a string based on the description and training instances) or a set of prompts, feed those into a language model to obtain completions.
-   a. Zero-shot learning: number of training examples is 0
-   b. One-shot learning: number of training examples is 1
-   c. Few-shot learning: number of training examples is few
+   1. Zero-shot learning: number of training examples is 0
+   2. One-shot learning: number of training examples is 1
+   3. Few-shot learning: number of training examples is few
 
 ## langchain community
 
