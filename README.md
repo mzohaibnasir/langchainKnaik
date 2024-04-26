@@ -29,9 +29,22 @@ Input: What school did Burne Hogarth establish?
 Output: School of Visual Arts
 Adapting a Language Model to a Task
 To adapt a language model to a task, we need:
-Natural language description of the task: A brief description of the task in natural language.
-Training instances: A set of input-output pairs to fine-tune the language model.
-By adapting a language model to a task, we can leverage its language understanding capabilities to perform specific tasks, such as question answering, text classification, and more.
+
+1. Natural language description of the task: A brief description of the task in natural language.
+2. Training instances: A set of input-output pairs to fine-tune the language model.
+
+# By adapting a language model to a task, we can leverage its language understanding capabilities to perform specific tasks, such as question answering, text classification, and more.
+
+#There are two primary ways to perform adaptation:
+
+1. Training (standard supervised learning): train a new model that maps inputs to outputs, either by
+   a. creating a new model that uses the language model as features (probing), or
+   b. starting with the language model and updating it based on the training instances (fine-tuning), or
+   c. something in between (lightweight fine-tuning).
+2. Prompting (in-context learning): Construct a prompt (a string based on the description and training instances) or a set of prompts, feed those into a language model to obtain completions.
+   a. Zero-shot learning: number of training examples is 0
+   b. One-shot learning: number of training examples is 1
+   c. Few-shot learning: number of training examples is few
 
 ## langchain community
 
