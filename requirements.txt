@@ -4,5 +4,5 @@ python-dotenv
 streamlit
 langchain_community
 langserve
-fastapi
+fastapi # for swagger implementation
 uvicorn
