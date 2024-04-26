@@ -59,6 +59,8 @@ To adapt a language model to a task, we need:
 
 # we can break down the the joint probability into the product of the conditional probabilities for each token by the chain rule.
 
+# Perplexity, on the other hand, is a measure used to evaluate language models, particularly in the context of natural language processing. It quantifies how well a language model predicts a given sequence of tokens. Perplexity is calculated based on the probabilities assigned by the model to each token in the sequence. While perplexity is important for assessing the quality of language models, it does not directly address the vanishing gradient problem.
+
 # Perplexity: As explained earlier, it's a metric used to evaluate the performance of a language model. It essentially measures how well the model predicts the next word in a sequence. Perplexity doesn't deal with the training process itself, but rather how well the trained model performs.
 
 #####################################################################################################3333
