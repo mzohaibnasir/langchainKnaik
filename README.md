@@ -71,5 +71,13 @@ all third-party integrations will be available in langchain-community
 
 ## ollama - to run llms locally
 
-- first do `ollama run <model name>` E pulling model
-  -from langchain_community.llms import ( Ollama) ; llm = Ollama(model="llama2")
+1. first do `ollama run <model name>` pulling model
+2. from langchain_community.llms import ( Ollama) ; llm = Ollama(model="llama2")
+
+################################################################
+
+# API for deployment(langServe - fastAPI - SwaggerUI)
+
+Langserve is for deployment
+
+architecture: [APP] ------- [APIs]---------[Routes to LLMs]
