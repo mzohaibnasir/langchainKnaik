@@ -14,6 +14,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+# langchain
+os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
 
 
 fastAPIapp = FastAPI(
@@ -21,7 +24,7 @@ fastAPIapp = FastAPI(
 )
 
 # adding routes
-add_routes(fastAPIapp, ChatOpenAI(), path="/openai")
+# add_routes(fastAPIapp, ChatOpenAI(), path="/openai")
 
 # to integrate prompt template with the route
 # model1
