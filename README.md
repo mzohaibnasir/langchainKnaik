@@ -81,3 +81,14 @@ all third-party integrations will be available in langchain-community
 Langserve is for deployment
 
 architecture: [APP] ------- [APIs]---------[Routes to LLMs]
+
+###################################################################3333
+
+# RAG: querying from data sources
+
+Components:
+
+1. load source data.(data ingestion)
+2. You can load/transform/embed loaded source data.(conversion to chunks and then embedidngs).
+3. then data is stored in Vectorstore
+4. Query vector store
