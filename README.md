@@ -93,6 +93,26 @@ Components:
 3. then data is stored in Vectorstore
 4. Query vector store
 
+###################################################################3
+
+# Function calling
+
+Learn how to connect large language models to external tools.
+
 #################################################################
 
 # IN advaned RAG , we'll use LLMS using concept of chain-and-retrieval.
+
+# create_stuff_documents_chain
+
+is a function from a library called LangChain. It's designed to work with large language models (LLMs) like GPT-3 or Jurassic-1 Jumbo. Here's what it does:
+
+Input: It takes a list of documents as input. These documents can be text passages, articles, emails, or anything you want the LLM to consider.
+
+Formatting: It combines all the documents into a single prompt for the LLM. Each document is likely converted into text, and a separator (like a newline) might be added between them.
+
+Feeding the LLM: The entire prompt, containing all the documents, is then fed to the LLM.
+
+Important Note: LLMs have a limited context window. This means they can only effectively process a certain amount of information at once. "create_stuff_documents_chain" works best when the total length of all your documents fits within this context window. If it's too large, the LLM might get confused and generate inaccurate or nonsensical outputs.
+
+Here's an analogy: Imagine you're showing a bunch of pictures to a friend and asking them a question. "create_stuff_documents_chain" is like putting all those pictures into a single collage before showing it to your friend. It works well if the collage isn't too overwhelming, but if there's too much information, your friend might have trouble understanding the big picture.
