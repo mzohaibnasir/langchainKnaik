@@ -89,6 +89,6 @@ architecture: [APP] ------- [APIs]---------[Routes to LLMs]
 Components:
 
 1. load source data.(data ingestion)
-2. You can load/transform/embed loaded source data.(conversion to chunks and then embedidngs).
+2. You can load/transform/embed loaded source data.(conversion to chunks and then embeddings).
 3. then data is stored in Vectorstore
 4. Query vector store

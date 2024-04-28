@@ -7,3 +7,4 @@ langserve
 fastapi # for swagger implementation
 uvicorn
 sse_starlette
+bs4
