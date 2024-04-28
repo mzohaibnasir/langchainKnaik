@@ -140,3 +140,7 @@ Feeding the LLM: The entire prompt, containing all the documents, is then fed to
 Important Note: LLMs have a limited context window. This means they can only effectively process a certain amount of information at once. "create_stuff_documents_chain" works best when the total length of all your documents fits within this context window. If it's too large, the LLM might get confused and generate inaccurate or nonsensical outputs.
 
 Here's an analogy: Imagine you're showing a bunch of pictures to a friend and asking them a question. "create_stuff_documents_chain" is like putting all those pictures into a single collage before showing it to your friend. It works well if the collage isn't too overwhelming, but if there's too much information, your friend might have trouble understanding the big picture.
+
+###################################################################
+
+# RAG with agents - multiple sources
