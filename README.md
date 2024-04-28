@@ -145,6 +145,8 @@ Here's an analogy: Imagine you're showing a bunch of pictures to a friend and as
 
 # RAG with agents - multiple sources(wiki, PDFs, texts , ARXiv)
 
+# Tools are interface that an agent, chain or LLM can use to interact with the world.
+
 suppose we have dependeny on folowing data sources ((wiki, PDFs, texts, ARXiv), we want tou integrate all these sources as wappers so we could implement this QA solution.
 
 we'll use
