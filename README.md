@@ -92,3 +92,7 @@ Components:
 2. You can load/transform/embed loaded source data.(conversion to chunks and then embeddings).
 3. then data is stored in Vectorstore
 4. Query vector store
+
+#################################################################
+
+# IN advaned RAG , we'll use LLMS using concept of chain-and-retrieval.
