@@ -143,4 +143,13 @@ Here's an analogy: Imagine you're showing a bunch of pictures to a friend and as
 
 ###################################################################
 
-# RAG with agents - multiple sources
+# RAG with agents - multiple sources(wiki, PDFs, texts , ARXiv)
+
+suppose we have dependeny on folowing data sources ((wiki, PDFs, texts, ARXiv), we want tou integrate all these sources as wappers so we could implement this QA solution.
+
+we'll use
+
+1. Tools -> tooklits
+2. Agents
+
+we can use each source as different tool. and we can wrap all of these sources as toolkit. and, then, with helpp of agesmts we'll be able to every sort of QA search.
