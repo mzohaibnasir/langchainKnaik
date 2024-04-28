@@ -99,6 +99,30 @@ Components:
 
 Learn how to connect large language models to external tools.
 
+# Summarizer
+
+A central question for building a summarizer is how to pass your documents into the LLM’s context window. Two common approaches for this are:
+
+Stuff: Simply “stuff” all your documents into a single prompt. This is the simplest approach (see here for more on the create_stuff_documents_chain constructor, which is used for this method).
+
+Map-reduce: Summarize each document on it’s own in a “map” step and then “reduce” the summaries into a final summary (see here for more on the MapReduceDocumentsChain, which is used for this method).
+
+####################################################################333
+In LangChain, a Runnable is a fundamental building block for creating data processing pipelines. It defines a standard interface for components that can be chained together to perform complex tasks. Here's a breakdown of what Runnables are and how they work:
+
+What it is:
+
+A Runnable is essentially a piece of code that can be invoked with data and produces an output.
+Many LangChain components, like chat models, large language models (LLMs), data retrievers, and more, implement the Runnable interface.
+This standardized interface ensures all these components can be seamlessly integrated and used together.
+Key functionalities:
+
+invoke(data): This is the core method that takes input data and processes it according to the Runnable's logic. The output can be anything, like text, data structures, or even calls to other Runnables.
+stream(data) (optional): This method allows for processing data in chunks, which is useful for handling large datasets or real-time scenarios. It can return the results piece by piece as they become available.
+batch(data_list) (optional): This method lets you process a list of inputs simultaneously, potentially improving efficiency for certain tasks.
+
+pen_spark
+
 #################################################################
 
 # IN advaned RAG , we'll use LLMS using concept of chain-and-retrieval.
