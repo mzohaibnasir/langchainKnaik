@@ -14,3 +14,4 @@ faiss-cpu #Faiss is a library — developed by Facebook AI — that enables effi
 langchainhub
 grop
 langchain-groq
+sentence_transformers
