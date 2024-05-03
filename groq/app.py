@@ -33,7 +33,7 @@ if "vector" not in st.session_state:
         chunk_size=1000, chunk_overlap=200
     )
     st.session_state.final_documents = st.session_state.text_splitter.split_documents(
-        st.session_state.docs
+        st.session_state.docs[:10]
     )
     st.session_state.vectors = FAISS.from_documents(
         st.session_state.final_documents, st.session_state.embeddings
@@ -51,14 +51,12 @@ prompt = ChatPromptTemplate.from_template(
     {context}
     </context>
     Questions:{input}
-    
     """
 )
 # create_doc_chain
 document_chain = create_stuff_documents_chain(llm, prompt)
-retriever = st.session_state.vector.as_retriever()
+retriever = st.session_state.vectors.as_retriever()
 retriever_chain = create_retrieval_chain(retriever, document_chain)
-
 prompt = st.text_input("Input your prompt")
 
 if prompt:
